@@ -19,6 +19,7 @@ class LinkedList{
 					temphead=temphead.next;
 			 }
 			 temphead.next=temp;
+			temp.next=null;
 	        }
 			 
 
