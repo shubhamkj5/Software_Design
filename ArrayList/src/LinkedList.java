@@ -94,6 +94,30 @@ class MyArrayList{
 				count--;
 				return res;
 				 
+			}
+		
+			public int seachAgeFirst(String name) {
+				 int age=0;
+	              for(int i=0;i<count;i++){
+	            	  Node temp=head[i];
+	            	  if (temp.readname().equals(name)){
+	            		  age=temp.readage();
+	            		  break;
+	            	  }
+	              }
+                    return age; 
+			}
+			public boolean isoldest(int age) {
+				 boolean res=true;
+	            
+	              for(int i=0;i<count;i++){
+	      	           Node temp=head[i];
+	      	           if (temp.readage()<age){  
+	      		                res=false;
+	      		                }
+	                   }
+	              
+	              return res  ;
 			}                                                 
 
 }
