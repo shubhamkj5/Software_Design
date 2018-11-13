@@ -12,7 +12,7 @@ import java.util.Scanner;
 					int age;
 
 					int choice=0;
-					while (choice!=10){
+					while (choice!=11){
  						System.out.println();
 				    	System.out.println("Menu:");
 						System.out.println("1: Insert");
@@ -22,8 +22,10 @@ import java.util.Scanner;
                         System.out.println("5: count");
                         System.out.println("6: Age of oldest");
 						System.out.println("7: How many Over than given Age");
+						System.out.println("8: Is Everone Older than given Age");
 						System.out.println("9: Initialize");
-						System.out.println("10: Exit \n");
+						System.out.println("10: Search First");
+						System.out.println("11: Exit \n");
 						System.out.print("\nPlease enter a value-->");
 						choice=sc.nextInt();
 						switch(choice){
@@ -65,19 +67,30 @@ import java.util.Scanner;
 									age=sc.nextInt();
                                 	System.out.println("Older than"+ age+" == "+l.olderThan(age));
 								       break;
+                                case 8:
+                                	System.out.print("Enter Age:");
+									age=sc.nextInt();
+                                	System.out.println("Max Age== "+l.isoldest(age));
+								       break;      
 								case 9:  
                                           l.insert("A",5);
 							              l.insert("B",15);
 							              l.insert("C",4);
-							              l.insert("D",8);
+							              l.insert("B",8);
 		                                  l.insert("E",25);
                                           l.insert("F",20);
 								        break;     
-								        
+								 case 10:
+									 System.out.print("Enter Name:");
+									 name=sc.next();
+								     int res21=l.seachAgeFirst(name);
+	                                 System.out.println("Age== "+res21);
+									       break;
 								        
 								        
 							    default:}
 							}
+					sc.close();
    }}
 
 
